@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const [language, setLanguage] = useState("Polski");
-
-  const handleLanguageChange = (event) => {
-    setLanguage(event.target.value);
-  };
-
   return (
     <nav className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 flex items-center justify-between shadow-lg">
       {/* Logo */}
@@ -26,18 +21,15 @@ const Navbar = () => {
       {/* Additional Buttons (Log In & Language Selector) */}
       <div className="flex items-center space-x-4">
         {/* Log In Button */}
-        <button className="text-white hover:text-green-500 transition duration-200">Zaloguj się</button>
+        <Link to="/login" className="text-white hover:text-green-500 transition duration-200">Zaloguj się</Link>
 
         {/* Language Dropdown */}
-        <select 
-          value={language} 
-          onChange={handleLanguageChange} 
-          className="bg-gray-700 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 hover:bg-gray-600 transition duration-200">
-          <option value="Polski">Polski</option>
-          <option value="English">English</option>
-          <option value="Español">Español</option>
-          <option value="Deutsch">Deutsch</option>
-          <option value="Français">Français</option>
+        <select className="bg-gray-700 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 hover:bg-gray-600 transition duration-200">
+          <option>Polski</option>
+          <option>English</option>
+          <option>Español</option>
+          <option>Deutsch</option>
+          <option>Français</option>
         </select>
 
         {/* Install Steam Button */}
