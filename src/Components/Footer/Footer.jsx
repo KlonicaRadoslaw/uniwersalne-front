@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-gray-400 p-8 text-center mt-8">
+    <footer className="bg-gray-800 text-gray-400 p-8 text-center">
       <div className="flex flex-wrap justify-center gap-4 mb-4 text-sm">
         <a href="#valve" className="hover:text-white transition duration-200">Informacje o Valve</a>
         <a href="#jobs" className="hover:text-white transition duration-200">Praca</a>

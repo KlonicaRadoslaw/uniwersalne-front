@@ -1,17 +1,16 @@
 import React from 'react'
+import Market from '../../Components/Market/Market'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import Home from '../../Components/Home/Home'
 
-
-const HomePage = () => {
+const MarketPage = () => {
   return (
     <>
-    <Navbar />
-    <Home />
-    <Footer />
+        <Navbar/>
+        <Market/>
+        <Footer/>
     </>
   )
 }
 
-export default HomePage
+export default MarketPage
