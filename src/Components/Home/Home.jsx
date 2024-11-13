@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
       {/* Featured Section */}
       <div className="p-6">
         <h2 className="text-2xl font-semibold mb-4">Featured & Recommended</h2>
