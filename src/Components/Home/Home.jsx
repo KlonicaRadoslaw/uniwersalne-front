@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -8,18 +9,18 @@ function Home() {
         <h2 className="text-2xl font-semibold mb-4">Featured & Recommended</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Replace with dynamic items */}
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <Link className="bg-gray-800 p-4 rounded-lg" to="/game">
             <img src="https://your-game-image.com" alt="Game 1" className="w-full h-32 object-cover rounded-md" />
             <h3 className="mt-2 font-semibold">Game Title 1</h3>
-          </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
+          </Link>
+          <Link className="bg-gray-800 p-4 rounded-lg" to="/game">
             <img src="https://your-game-image.com" alt="Game 2" className="w-full h-32 object-cover rounded-md" />
             <h3 className="mt-2 font-semibold">Game Title 2</h3>
-          </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
+            </Link>
+          <Link className="bg-gray-800 p-4 rounded-lg" to="/game">
             <img src="https://your-game-image.com" alt="Game 3" className="w-full h-32 object-cover rounded-md" />
             <h3 className="mt-2 font-semibold">Game Title 3</h3>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
