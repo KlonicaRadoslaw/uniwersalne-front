@@ -5,14 +5,14 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 flex items-center justify-between shadow-lg">
       {/* Logo */}
-      <div className="flex items-center space-x-4">
-        <img src="path/to/steam-logo.png" alt="Steam Logo" className="h-10" />
-        <span className="text-white font-bold text-lg">Steam</span>
-      </div>
+        <Link className="flex items-center space-x-4" to="/">
+        <img src="path/to/steam-logo.png" alt="Steam 2.0 Logo" className="h-10" />
+        <span className="text-white font-bold text-lg">Steam 2.0</span>
+        </Link>
 
       {/* Navigation Links */}
       <div className="flex space-x-8 text-sm text-gray-300">
-        <a href="#store" className="hover:text-white transition duration-200">Sklep</a>
+        <Link href="#store" className="hover:text-white transition duration-200" to="/">Sklep</Link>
         <a href="#community" className="hover:text-white transition duration-200">Społeczność</a>
         <a href="#info" className="hover:text-white transition duration-200">Informacje</a>
         <a href="#support" className="hover:text-white transition duration-200">Pomoc Techniczna</a>
