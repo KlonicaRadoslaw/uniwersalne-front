@@ -36,6 +36,8 @@ const Navbar = () => {
             </div>
           </MenuItems>
         </Menu>
+
+        {/* Społeczność */}
         <Menu as="div" className="relative inline-block text-left">
           <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-gray-700 transition duration-200">
             Społeczność
@@ -57,6 +59,8 @@ const Navbar = () => {
             </div>
           </MenuItems>
         </Menu>
+
+        {/* Informacje */}
         <Menu as="div" className="relative inline-block text-left">
           <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-gray-700 transition duration-200">
             Informacje
