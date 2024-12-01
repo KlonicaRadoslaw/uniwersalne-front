@@ -1,0 +1,22 @@
+{
+  "games": [
+    {
+      "id": "1",
+      "title": "Microsoft Flight Simulator 2024",
+      "description": "Explore the world with the largest fleet of planes and take simulation to the next level.",
+      "image": "flight_simulator_2024.jpg"
+    },
+    {
+      "id": "2",
+      "title": "War Thunder",
+      "description": "Realistic combat simulation across air, land, and sea.",
+      "image": "war_thunder.jpg"
+    },
+    {
+      "id": "3",
+      "title": "American Truck Simulator",
+      "description": "Experience legendary American trucks and deliver various cargoes across sunny California and beyond.",
+      "image": "american_truck_simulator.jpg"
+    }
+  ]
+}

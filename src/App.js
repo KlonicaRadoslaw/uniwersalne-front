@@ -4,7 +4,7 @@ import { Route, Routes, Navigate } from 'react-router';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import MarketPage from './Pages/MarketPage/MarketPage'
 import NewsPage from './Pages/NewsPage/NewsPage'
-import GamePage from './Pages/GamePage/GamePage'
+import GameDetailsPage from './Pages/GameDetailsPage/GameDetailsPage'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Route path="/login" element={<LoginPage/>} />
       <Route path="/market" element={<MarketPage/>} />
       <Route path="/news" element={<NewsPage/>} />
-      <Route path="/game" element={<GamePage/>} />
+      <Route path="/game/:id" element={<GameDetailsPage/>} />
     </Routes>
     </>
   );
