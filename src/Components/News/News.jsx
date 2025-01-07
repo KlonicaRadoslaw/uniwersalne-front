@@ -12,7 +12,7 @@ const News = () => {
           time: "GODZINĘ TEMU",
           description:
             "Get the package and/or additional editions and let your empire grow even further!",
-          imgUrl: "https://your-image-url.com/industry-giant.jpg",
+          imgUrl: "industry-giant.jpg",
           likes: 9,
           comments: 0,
         },
