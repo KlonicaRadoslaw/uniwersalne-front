@@ -12,7 +12,7 @@ const News = () => {
           time: "GODZINĘ TEMU",
           description:
             "Get the package and/or additional editions and let your empire grow even further!",
-          imgUrl: "industry-giant.jpg",
+          imgUrl: "industry_giant.jpg",
           likes: 9,
           comments: 0,
         },
@@ -24,7 +24,7 @@ const News = () => {
           time: "Zakończy się za 5 dni",
           description:
             "We're ready to see your awesome screenshots! Welcome to the 146th War Thunder Steam Screenshot Competition!",
-          imgUrl: "https://your-image-url.com/war-thunder.jpg",
+          imgUrl: "war_thunder.jpg",
           likes: 63,
           comments: 4,
         },
@@ -40,7 +40,7 @@ const News = () => {
           time: "15 GODZ. TEMU",
           description:
             "Howdy, partners! Today, we're celebrating the release of Texas, our largest map DLC for American Truck Simulator.",
-          imgUrl: "https://your-image-url.com/american-truck.jpg",
+          imgUrl: "american_truck_simulator.jpg",
           likes: 24,
           comments: 6,
         },
@@ -63,7 +63,7 @@ const News = () => {
               >
                 {/* Article Image */}
                 <img
-                  src={article.imgUrl}
+                  src={require(`../images/${article.imgUrl}`)}
                   alt={article.title}
                   className="w-24 h-24 object-cover rounded-lg"
                 />
