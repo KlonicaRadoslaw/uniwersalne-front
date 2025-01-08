@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
 import { ChevronDownIcon, XMarkIcon, Bars3Icon } from '@heroicons/react/24/outline';
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import { ArrowDownTrayIcon } from "@heroicons/react/16/solid";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -103,7 +104,7 @@ const Navbar = () => {
         </Menu>
 
         {/* Log In & Language Selector */}
-        <div className="flex flex-col md:flex-row items-start md:items-center md:space-x-4 mt-4 md:mt-0">
+        <div className="flex flex-col md:flex-row items-start md:items-center md:space-x-4 mt-4 md:mt-0 ps-10">
           <Link
             to="/login"
             className="text-white hover:text-green-500 transition duration-200 w-full md:w-auto text-sm font-semibold"
@@ -111,7 +112,7 @@ const Navbar = () => {
             Zaloguj się
           </Link>
           <div className="flex items-center space-x-2 bg-transparent rounded-md focus-within:ring-2 focus-within:ring-green-500 transition duration-200">
-            <GlobeAltIcon className="h-4 w-4 text-white" />
+            <GlobeAltIcon className="h-4 w-4 text-white -me-2" />
             <select className="px-2 appearance-none text-sm font-semibold bg-transparent text-white rounded-md focus:outline-none focus:bg-gray-900 hover:bg-transparent transition duration-200">
               <option>Polski</option>
               <option>English</option>
@@ -120,8 +121,8 @@ const Navbar = () => {
               <option>Français</option>
             </select>
           </div>
-          <button className="text-sm font-semibold bg-green-600 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-500 transition duration-200">
-            Zainstaluj Steam
+          <button className="text-sm font-semibold bg-green-600 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-500 transition duration-200 -ps-10">
+            <ArrowDownTrayIcon className="h-4 w-4 text-white" />
           </button>
         </div>
       </div>
