@@ -18,7 +18,7 @@ function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white py-8 px-4">
       
-    <form class="w-full mx-auto p-3">   
+    <form class="w-full mx-auto p-3 -mt-6">   
         <label for="default-search" class="w-max mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Wyszukaj</label>
         <div class="relative">
             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
