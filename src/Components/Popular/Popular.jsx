@@ -36,7 +36,7 @@ function Popular() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white py-8 px-4">
-      <form className="w-full mx-auto p-3">
+      <form className="w-full mx-auto p-3 -mt-10">
         <label htmlFor="default-search" className="w-max mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
           Wyszukaj
         </label>

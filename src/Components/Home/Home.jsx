@@ -41,7 +41,7 @@ function Home() {
               <img
                 src={require(`../images/${game.image}`)}
                 alt={game.title}
-                className="w-full h-48 object-cover rounded-md mb-4"
+                className="w-full h-44 object-cover rounded-md mb-4"
               />
               <h3 className="text-xl font-semibold text-white">{game.title}</h3>
               <p className="text-gray-400 text-sm mt-2 mb-4">{game.description}</p>
