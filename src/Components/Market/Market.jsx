@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { loadGamesData } from '../../helperFunctions/loadGamesData';
+import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 
 function Market() {
   const [games, setGames] = useState([]);
@@ -14,6 +15,26 @@ function Market() {
     fetchData();
   }, []);
 
+  const item = [
+    {
+      name: "CS:GO Skin 1",
+      price: "100zł",
+      image: "s1.png",
+      description: "Opis skina 1",
+    },
+    {
+      name: "CS:GO Skin 2",
+      price: "200zł",
+      image: "s2.jpg",
+      description: "Opis skina 2",
+    },
+    {
+      name: "Fortnite Skin 1",
+      price: "300zł",
+      image: "s3.jpg",
+      description: "Opis skina 3",
+    },
+  ];
   return (
     <div className="bg-gray-900 text-white min-h-screen p-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
       {/* Left Column - Item List */}
@@ -22,28 +43,24 @@ function Market() {
         <div className="space-y-4">
           <div className="flex flex-col gap-6">
             {/* Game Item Cards */}
-            {games.map((game) => (
-              <div key={game.id} className="flex flex-row items-center gap-6 bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+            {item.map((item) => (
+              <div key={item.id} className="flex flex-row items-center gap-6 bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
                 {/* Obrazek po lewej stronie */}
                 <img
-                  src={require(`../images/${game.image}`)}
-                  alt={game.title}
+                  src={require(`../images/${item.image}`)}
+                  alt={item.title}
                   className="w-32 h-32 object-cover rounded-md"
                 />
                 {/* Opis i cena wyśrodkowane do prawej */}
                 <div className="flex flex-col justify-center items-start w-full">
-                <Link
-                  to={{ pathname: `/game/${game.id}`, state: { game } }}
-                  className="text-sm text-blue-500 hover:text-blue-300 transition duration-300"
-                >
-                  <h3 className="text-xl font-semibold text-white text-left hover:text-blue-300">{game.title}</h3>
-                </Link>
-                <p className="text-gray-400 text-sm mt-2 mb-4 text-left">{game.description}</p>
+                  <h3 className="text-xl font-semibold text-white text-left hover:text-blue-300">{item.name}</h3>
+                <p className="text-gray-400 text-sm mt-2 mb-4 text-left">{item.description}</p>
                 <div className="flex flex-row justify-between items-center w-full">
                   <div></div> {/* Placeholder to push the price div to the right */}
-                  <div className="bg-green-500 text-white p-2 rounded-lg shadow-lg">
-                    <p className="text-lg font-semibold">{game.price}</p>
-                  </div>
+                <div className="bg-green-500 text-white p-2 rounded-md shadow-lg flex items-center">
+                  <ShoppingCartIcon className="w-6 h-6 mr-2" />
+                  <p className="text-md font-semibold">{item.price}</p>
+                </div>
                 </div>
               </div>
 

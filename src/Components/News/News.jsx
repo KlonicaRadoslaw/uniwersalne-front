@@ -1,4 +1,5 @@
 import React from "react";
+import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 
 const News = () => {
   const newsData = [
@@ -50,7 +51,7 @@ const News = () => {
 
   return (
     <div className="bg-gray-900 text-white p-6 min-h-screen">
-      <form className="w-full mx-auto ps-0 pb-4 ">
+      <form className="w-full mx-auto ps-0 pb-4">
         <label htmlFor="default-search" className="w-max mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
           Wyszukaj
         </label>
@@ -72,6 +73,15 @@ const News = () => {
           </button>
         </div>
       </form>
+
+      <div className="flex justify-start mb-4 text-center ">
+      <button className="text-white w-64 bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 flex items-center">
+    <Cog6ToothIcon className="w-6 h-6 mr-2" />
+    Opcje i Filtry
+  </button>
+</div>
+
+
       {newsData.map((section, sectionIndex) => (
         <div key={sectionIndex} className="mb-8">
           {/* Section Header */}
@@ -85,7 +95,7 @@ const News = () => {
               >
                 {/* Article Image */}
                 <img
-                  src={require(`../images/${article.imgUrl}`)}
+                  src={require(`../images/${article.imgUrl}`)} // fixed dynamic image import
                   alt={article.title}
                   className="w-24 h-24 object-cover rounded-lg"
                 />
