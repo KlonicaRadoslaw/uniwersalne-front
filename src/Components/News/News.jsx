@@ -1,5 +1,6 @@
 import React from "react";
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const News = () => {
   const newsData = [
@@ -16,6 +17,7 @@ const News = () => {
           imgUrl: "industry_giant.jpg",
           likes: 9,
           comments: 0,
+          link: "/news/industry-giant", // Przykładowy link
         },
         {
           title: "War Thunder",
@@ -28,6 +30,7 @@ const News = () => {
           imgUrl: "war_thunder.jpg",
           likes: 63,
           comments: 4,
+          link: "/news/war-thunder", // Przykładowy link
         },
       ],
     },
@@ -44,6 +47,7 @@ const News = () => {
           imgUrl: "american_truck_simulator.jpg",
           likes: 24,
           comments: 6,
+          link: "/news/american-truck-simulator", // Przykładowy link
         },
       ],
     },
@@ -74,13 +78,12 @@ const News = () => {
         </div>
       </form>
 
-      <div className="flex justify-start mb-4 text-center ">
-      <button className="text-white w-64 bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 flex items-center">
-    <Cog6ToothIcon className="w-6 h-6 mr-2" />
-    Opcje i Filtry
-  </button>
-</div>
-
+      <div className="flex justify-start mb-4 text-center">
+        <button className="text-white w-64 bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 flex items-center">
+          <Cog6ToothIcon className="w-6 h-6 mr-2" />
+          Opcje i Filtry
+        </button>
+      </div>
 
       {newsData.map((section, sectionIndex) => (
         <div key={sectionIndex} className="mb-8">
@@ -89,37 +92,40 @@ const News = () => {
           {/* News Articles */}
           <div className="space-y-4">
             {section.articles.map((article, articleIndex) => (
-              <div
+              <Link
+                to={"#"} // Zmieniamy dynamicznie link każdego artykułu
                 key={articleIndex}
-                className="bg-gray-800 p-4 rounded-lg flex items-center space-x-4"
+                className="hover:text-blue-300 hover:bg-blue-900 transition duration-300 p-4"
               >
-                {/* Article Image */}
-                <img
-                  src={require(`../images/${article.imgUrl}`)} // fixed dynamic image import
-                  alt={article.title}
-                  className="w-24 h-24 object-cover rounded-lg"
-                />
-                {/* Article Content */}
-                <div className="flex-1">
-                  <h3 className="font-bold text-lg">{article.title}</h3>
-                  <h4 className="text-sm text-blue-400">{article.subtitle}</h4>
-                  <p className="text-xs text-gray-400 mt-1">
-                    {article.type} · {article.time}
-                  </p>
-                  <p className="text-sm mt-2">{article.description}</p>
-                </div>
-                {/* Article Stats */}
-                <div className="text-gray-400 flex items-center space-x-2">
-                  <div className="flex items-center space-x-1">
-                    <span>👍</span>
-                    <span>{article.likes}</span>
+                <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-4 mb-4 hover:shadow-lg hover:bg-gray-700 transition duration-300">
+                  {/* Article Image */}
+                  <img
+                    src={require(`../images/${article.imgUrl}`)} // fixed dynamic image import
+                    alt={article.title}
+                    className="w-24 h-24 object-cover rounded-lg"
+                  />
+                  {/* Article Content */}
+                  <div className="flex-1">
+                    <h3 className="font-bold text-lg">{article.title}</h3>
+                    <h4 className="text-sm text-blue-400">{article.subtitle}</h4>
+                    <p className="text-xs text-gray-400 mt-1">
+                      {article.type} · {article.time}
+                    </p>
+                    <p className="text-sm mt-2">{article.description}</p>
                   </div>
-                  <div className="flex items-center space-x-1">
-                    <span>💬</span>
-                    <span>{article.comments}</span>
+                  {/* Article Stats */}
+                  <div className="text-gray-400 flex items-center space-x-2">
+                    <div className="flex items-center space-x-1">
+                      <span>👍</span>
+                      <span>{article.likes}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <span>💬</span>
+                      <span>{article.comments}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
