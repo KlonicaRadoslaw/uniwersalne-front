@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { Checkbox } from "@headlessui/react";
 
 const News = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Przełączamy widoczność menu
+  };
+
   const newsData = [
     {
       date: "DZIŚ",
@@ -54,7 +61,7 @@ const News = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white p-6 min-h-screen">
+    <div className="bg-gray-900 text-white p-6">
       <form className="w-full mx-auto ps-0 pb-4">
         <label htmlFor="default-search" className="w-max mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
           Wyszukaj
@@ -78,33 +85,69 @@ const News = () => {
         </div>
       </form>
 
-      <div className="flex justify-start mb-4 text-center">
-        <button className="text-white w-64 bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 flex items-center">
+      <div className="flex justify-start text-center">
+        {/* Przycisk z rozwijaną listą */}
+        <button
+          onClick={toggleMenu}
+          className="text-white w-64 bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 flex items-center"
+        >
           <Cog6ToothIcon className="w-6 h-6 mr-2" />
           Opcje i Filtry
         </button>
       </div>
 
+      {/* Rozwijane menu pod przyciskiem */}
+      {isMenuOpen && (
+        <div className="relative w-64 bg-gray-800 rounded-lg shadow-lg mb-4 mt-2 p-4 pb-0">
+          <p>Sortowanie</p>
+          <ul className="text-white p-2">
+            <li className="hover:bg-gray-700 cursor-pointer">A-Z</li>
+            <li className="hover:bg-gray-700 cursor-pointer">Z-A</li>
+            <li className="hover:bg-gray-700 cursor-pointer">Data</li>
+            <li className="hover:bg-gray-700 cursor-pointer">Typ</li>
+          </ul>
+         {/* add checkbox */}
+         <p>Filtry</p>
+          <div className="mb-4 mt-2 p-2">
+            <label className="block text-white">
+              <input
+                type="checkbox"
+                name="news"
+                className="mr-2"
+              />
+              Aktualności
+            </label>
+            <label className="block text-white">
+              <input
+                type="checkbox"
+                name="konkursy"
+                className="mr-2"
+              />
+              Konkursy
+            </label>
+          </div>
+        </div>
+      )}
+
+      {/* News Articles Section */}
       {newsData.map((section, sectionIndex) => (
-        <div key={sectionIndex} className="mb-8">
+        <div key={sectionIndex} className="mt-6">
           {/* Section Header */}
-          <h2 className="text-xl font-semibold mb-4">{section.date}</h2>
+          <h2 className="text-xl font-semibold">{section.date}</h2>
           {/* News Articles */}
           <div className="space-y-4">
             {section.articles.map((article, articleIndex) => (
               <Link
-                to={"#"} // Zmieniamy dynamicznie link każdego artykułu
+                to={article.link} // Używamy dynamicznego linku
                 key={articleIndex}
-                className="hover:text-blue-300 hover:bg-blue-900 transition duration-300 p-4"
+                className="hover:text-blue-300 transition duration-300 p-4"
               >
-                <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-4 mb-4 hover:shadow-lg hover:bg-gray-700 transition duration-300">
-                  {/* Article Image */}
+                <div className="bg-gray-800 p-4 rounded-lg flex items-center space-x-4 hover:shadow-xl hover:shadow transition duration-100">
                   <img
-                    src={require(`../images/${article.imgUrl}`)} // fixed dynamic image import
+                    src={require(`../images/${article.imgUrl}`)} // dynamiczny import obrazu
                     alt={article.title}
                     className="w-24 h-24 object-cover rounded-lg"
                   />
-                  {/* Article Content */}
                   <div className="flex-1">
                     <h3 className="font-bold text-lg">{article.title}</h3>
                     <h4 className="text-sm text-blue-400">{article.subtitle}</h4>
@@ -113,7 +156,6 @@ const News = () => {
                     </p>
                     <p className="text-sm mt-2">{article.description}</p>
                   </div>
-                  {/* Article Stats */}
                   <div className="text-gray-400 flex items-center space-x-2">
                     <div className="flex items-center space-x-1">
                       <span>👍</span>
