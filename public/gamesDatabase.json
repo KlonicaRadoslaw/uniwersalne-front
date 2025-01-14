@@ -16,7 +16,7 @@
       "title": "War Thunder",
       "description": "Realistic combat simulation across air, land, and sea.",
       "image": "war_thunder.jpg",
-      "price": "0.00  zł",
+      "price": "0.00 zł",
       "oldPrice": "20.00 zł",
       "rating": "4.0",
       "category": ["Simulation"],
@@ -28,10 +28,43 @@
       "description": "Experience legendary American trucks and deliver various cargoes across sunny California and beyond.",
       "image": "american_truck_simulator.jpg",
       "price": "19.99 zł",
+      "oldPrice": "29.99 zł",
       "rating": "4.0",
       "category": ["Simulation"],
-      "platforms": ["PC", "Xbox Series", "PlayStation 5"],
-      "oldPrice": "29.99 zł"
+      "platforms": ["PC", "Xbox Series", "PlayStation 5"]
+    },
+    {
+      "id": "4",
+      "title": "The Sims 4",
+      "description": "Create unique Sims, build their homes, and explore vibrant worlds.",
+      "image": "the_sims_4.png",
+      "price": "129.99 zł",
+      "oldPrice": "149.99 zł",
+      "rating": "4.3",
+      "category": ["Simulation", "Life Simulation"],
+      "platforms": ["PC", "Xbox Series", "PlayStation 5"]
+    },
+    {
+      "id": "5",
+      "title": "Cities: Skylines",
+      "description": "Build the city of your dreams and manage its economy and infrastructure.",
+      "image": "cities_skylines.jpg",
+      "price": "39.99 zł",
+      "oldPrice": "49.99 zł",
+      "rating": "4.7",
+      "category": ["Simulation", "Strategy"],
+      "platforms": ["PC"]
+    },
+    {
+      "id": "8",
+      "title": "Planet Zoo",
+      "description": "Build a world for wildlife in the ultimate zoo simulation.",
+      "image": "planet_zoo.png",
+      "price": "89.99 zł",
+      "oldPrice": "99.99 zł",
+      "rating": "4.6",
+      "category": ["Simulation", "Strategy"],
+      "platforms": ["PC"]
     }
   ]
 }
