@@ -43,7 +43,7 @@ const Navbar = () => {
             <div className="py-1">
               <MenuItem>
                 <Link
-                  to="/popular"
+                  to="#"
                   className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700"
                 >
                   Sklep Główny
