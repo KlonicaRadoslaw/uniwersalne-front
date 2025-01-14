@@ -264,7 +264,7 @@ function Home() {
               <img
                 src={require(`../images/${game.image}`)}
                 alt={game.title}
-                className="w-100 h-32 object-cover rounded-md"
+                className="w-2/3 h-32 object-cover rounded-md"
               />
               <div className="flex flex-col justify-center items-end w-full">
                 <Link
