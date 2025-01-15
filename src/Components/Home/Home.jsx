@@ -13,6 +13,7 @@ function Home() {
   const [filteredGames, setFilteredGames] = useState(games[[0, 2]]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchData = async () => {
       try {
         const data = await loadGamesData();
