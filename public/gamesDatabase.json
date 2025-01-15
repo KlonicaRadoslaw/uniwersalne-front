@@ -9,7 +9,38 @@
       "oldPrice": "69.99 zł",
       "rating": "4.5",
       "category": ["Simulation"],
-      "platforms": ["PC", "Xbox Series", "PlayStation 5"]
+      "platforms": ["PC", "Xbox Series", "PlayStation 5"],
+      "details": {
+        "reviews": "Brak recenzji użytkowników",
+        "releaseDate": "19 listopada 2024",
+        "developer": "Asobo Studio",
+        "publisher": "Xbox Game Studios"
+      },
+      "tags": ["Symulatory", "Latanie", "Realistyczne", "VR", "Familijne"],
+      "features": [
+        "Jednoosobowa",
+        "Wieloplatformowa wieloosobowa",
+        "Osiągnięcia Steam",
+        "Zakupy w aplikacji",
+        "Włączone HDR"
+      ],
+      "releaseInfo": {
+        "date": "19 listopada 2024",
+        "note": "Ta gra planuje odblokowanie za około 3 dni."
+      },
+      "breadcrumbs": [
+        "Wszystkie gry",
+        "Gatunek: Symulacje",
+        "Seria Xbox Game Studios",
+        "Microsoft Flight Simulator 2024"
+      ],
+      "thumbnails": [
+        "flight_simulator_2024_thumb.jpg",
+        "flight_simulator_2024_thumb.jpg",
+        "flight_simulator_2024_thumb.jpg",
+        "flight_simulator_2024_thumb.jpg",
+        "flight_simulator_2024_thumb.jpg"
+      ]
     },
     {
       "id": "2",
@@ -20,7 +51,37 @@
       "oldPrice": "20.00 zł",
       "rating": "4.0",
       "category": ["Simulation"],
-      "platforms": ["PC", "Xbox Series", "PlayStation 5"]
+      "platforms": ["PC", "Xbox Series", "PlayStation 5"],
+      "details": {
+        "reviews": "Brak recenzji użytkowników",
+        "releaseDate": "18 listopada 2024",
+        "developer": "Gaijin Entertainment",
+        "publisher": "Gaijin Entertainment"
+      },
+      "tags": ["Symulatory", "Wojenne", "Realistyczne"],
+      "features": [
+        "Jednoosobowa",
+        "Wieloplatformowa wieloosobowa",
+        "Osiągnięcia Steam",
+        "Zakupy w aplikacji",
+        "Włączone HDR"
+      ],
+      "releaseInfo": {
+        "date": "18 listopada 2024",
+        "note": "Ta gra planuje odblokowanie za około 4 dni."
+      },
+      "breadcrumbs": [
+        "Wszystkie gry",
+        "Gatunek: Symulacje",
+        "War Thunder"
+      ],
+      "thumbnails": [
+        "war_thunder_thumb.jpg",
+        "war_thunder_thumb.jpg",
+        "war_thunder_thumb.jpg",
+        "war_thunder_thumb.jpg",
+        "war_thunder_thumb.jpg"
+      ]
     },
     {
       "id": "3",
@@ -31,7 +92,37 @@
       "oldPrice": "29.99 zł",
       "rating": "4.0",
       "category": ["Simulation"],
-      "platforms": ["PC", "Xbox Series", "PlayStation 5"]
+      "platforms": ["PC", "Xbox Series", "PlayStation 5"],
+      "details": {
+        "reviews": "Brak recenzji użytkowników",
+        "releaseDate": "20 listopada 2024",
+        "developer": "SCS Software",
+        "publisher": "SCS Software"
+      },
+      "tags": ["Symulatory", "Truck", "Realistyczne"],
+      "features": [
+        "Jednoosobowa",
+        "Wieloplatformowa wieloosobowa",
+        "Osiągnięcia Steam",
+        "Zakupy w aplikacji",
+        "Włączone HDR"
+      ],
+      "releaseInfo": {
+        "date": "20 listopada 2024",
+        "note": "Ta gra planuje odblokowanie za około 2 dni."
+      },
+      "breadcrumbs": [
+        "Wszystkie gry",
+        "Gatunek: Symulacje",
+        "American Truck Simulator"
+      ],
+      "thumbnails": [
+        "american_truck_simulator_thumb.jpg",
+        "american_truck_simulator_thumb.jpg",
+        "american_truck_simulator_thumb.jpg",
+        "american_truck_simulator_thumb.jpg",
+        "american_truck_simulator_thumb.jpg"
+      ]
     },
     {
       "id": "4",
@@ -42,7 +133,38 @@
       "oldPrice": "149.99 zł",
       "rating": "4.3",
       "category": ["Simulation", "Life Simulation"],
-      "platforms": ["PC", "Xbox Series", "PlayStation 5"]
+      "platforms": ["PC", "Xbox Series", "PlayStation 5"],
+      "details": {
+        "reviews": "Brak recenzji użytkowników",
+        "releaseDate": "22 listopada 2024",
+        "developer": "Maxis",
+        "publisher": "EA Games"
+      },
+      "tags": ["Symulatory", "Życie", "Rodzina"],
+      "features": [
+        "Jednoosobowa",
+        "Wieloplatformowa wieloosobowa",
+        "Osiągnięcia Steam",
+        "Zakupy w aplikacji",
+        "Włączone HDR"
+      ],
+      "releaseInfo": {
+        "date": "22 listopada 2024",
+        "note": "Ta gra planuje odblokowanie za około 5 dni."
+      },
+      "breadcrumbs": [
+        "Wszystkie gry",
+        "Gatunek: Symulacje",
+        "Life Simulation",
+        "The Sims 4"
+      ],
+      "thumbnails": [
+        "the_sims_4_thumb.png",
+        "the_sims_4_thumb.png",
+        "the_sims_4_thumb.png",
+        "the_sims_4_thumb.png",
+        "the_sims_4_thumb.png"
+      ]
     },
     {
       "id": "5",
@@ -53,7 +175,38 @@
       "oldPrice": "49.99 zł",
       "rating": "4.7",
       "category": ["Simulation", "Strategy"],
-      "platforms": ["PC"]
+      "platforms": ["PC"],
+      "details": {
+        "reviews": "Brak recenzji użytkowników",
+        "releaseDate": "24 listopada 2024",
+        "developer": "Colossal Order",
+        "publisher": "Paradox Interactive"
+      },
+      "tags": ["Symulatory", "Strategia", "Miasta"],
+      "features": [
+        "Jednoosobowa",
+        "Wieloplatformowa wieloosobowa",
+        "Osiągnięcia Steam",
+        "Zakupy w aplikacji",
+        "Włączone HDR"
+      ],
+      "releaseInfo": {
+        "date": "24 listopada 2024",
+        "note": "Ta gra planuje odblokowanie za około 1 dzień."
+      },
+      "breadcrumbs": [
+        "Wszystkie gry",
+        "Gatunek: Symulacje",
+        "Strategia",
+        "Cities: Skylines"
+      ],
+      "thumbnails": [
+        "cities_skylines_thumb.jpg",
+        "cities_skylines_thumb.jpg",
+        "cities_skylines_thumb.jpg",
+        "cities_skylines_thumb.jpg",
+        "cities_skylines_thumb.jpg"
+      ]
     },
     {
       "id": "8",
@@ -64,7 +217,38 @@
       "oldPrice": "99.99 zł",
       "rating": "4.6",
       "category": ["Simulation", "Strategy"],
-      "platforms": ["PC"]
+      "platforms": ["PC"],
+      "details": {
+        "reviews": "Brak recenzji użytkowników",
+        "releaseDate": "25 listopada 2024",
+        "developer": "Frontier Developments",
+        "publisher": "Frontier Developments"
+      },
+      "tags": ["Symulatory", "Strategia", "Zoologia"],
+      "features": [
+        "Jednoosobowa",
+        "Wieloplatformowa wieloosobowa",
+        "Osiągnięcia Steam",
+        "Zakupy w aplikacji",
+        "Włączone HDR"
+      ],
+      "releaseInfo": {
+        "date": "25 listopada 2024",
+        "note": "Ta gra planuje odblokowanie za około 6 dni."
+      },
+      "breadcrumbs": [
+        "Wszystkie gry",
+        "Gatunek: Symulacje",
+        "Strategia",
+        "Planet Zoo"
+      ],
+      "thumbnails": [
+        "planet_zoo_thumb.png",
+        "planet_zoo_thumb.png",
+        "planet_zoo_thumb.png",
+        "planet_zoo_thumb.png",
+        "planet_zoo_thumb.png"
+      ]
     }
   ]
 }

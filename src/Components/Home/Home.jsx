@@ -112,7 +112,7 @@ function Home() {
       </div>
 
       {/* Game List */}
-      <div className="w-full mx-auto p-3 mt-0 pt-0 h-100 w-full mx-auto p-3 -mt-7 max-w-7xl w-full px-4">
+      <div className="w-full mx-auto p-3 mt-0 pt-0 h-100 w-full mx-auto p-3 -mt-8 max-w-7xl w-full px-4">
         <div className="flex w-full">
           {/* Game List */}
           <div className="flex-1 block w-2/3 h-100 ps-3 text-sm text-gray-900 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
