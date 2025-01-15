@@ -39,7 +39,7 @@ function Market() {
     },
   ];
   return (
-    <div className="bg-gray-900 text-white min-h-screen p-6 flex flex-col">
+    <div className="bg-gray-900 text-white min-h-screen p-4 flex flex-col">
   {/* Full-width header */}
   <div className="w-full mb-6">
     <h1 className="text-3xl font-bold mb-4">Rynek społeczności</h1>

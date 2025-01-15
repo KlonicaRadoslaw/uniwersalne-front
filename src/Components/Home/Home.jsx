@@ -54,30 +54,15 @@ function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white py-8 px-4">
-      <form className="w-full mx-auto p-3 -mt-6 max-w-7xl w-full px-4">
-        <label
-          htmlFor="default-search"
-          className="w-max mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-        >
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white py-8 px-4 ">
+       <form className="w-full mx-auto ps-0 pb-4">
+        <label htmlFor="default-search" className="w-max mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
           Wyszukaj
         </label>
         <div className="relative">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-            <svg
-              className="w-4 h-4 text-gray-500 dark:text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
+            <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
             </svg>
           </div>
           <input
@@ -87,17 +72,14 @@ function Home() {
             placeholder="Czego szukasz"
             required
           />
-          <button
-            type="submit"
-            className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
+          <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Wyszukaj
           </button>
         </div>
       </form>
 
       {/* Categories */}
-      <div className="flex flex-wrap justify-center w-full p-5 mb-0 mx-auto max-w-7xl px-4 mt-3">
+      <div className="flex flex-wrap justify-center w-full p-5 mb-0 px-0 mt-3 ">
         {categories.map((category, index) => (
           <div
             key={index}
@@ -112,7 +94,7 @@ function Home() {
       </div>
 
       {/* Game List */}
-      <div className="w-full mx-auto p-3 mt-0 pt-0 h-100 w-full mx-auto p-3 -mt-8 max-w-7xl w-full px-4">
+      <div className="w-full mx-auto p-3 mt-0 pt-0 h-100 w-full mx-auto p-3 -mt-8 w-full px-0">
         <div className="flex w-full">
           {/* Game List */}
           <div className="flex-1 block w-2/3 h-100 ps-3 text-sm text-gray-900 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -222,7 +204,7 @@ function Home() {
       </div>
 
       {/* Featured Section */}
-      <div className="max-w-7xl w-full px-4 mt-3">
+      <div className="w-full px-0 mt-3">
         <h2 className="text-3xl font-bold text-center text-white mb-8 mt-5">Wyróżnione i polecane</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Game Item Cards */}
@@ -253,7 +235,7 @@ function Home() {
       </div>
 
       {/* Oferty specjalne */}
-      <div className="max-w-7xl w-full px-4 mt-8">
+      <div className="w-full px-0 mt-8">
         <h2 className="text-3xl font-bold text-center text-white mb-8 mt-5">Oferty specjalne</h2>
         <div className="flex flex-col gap-6">
           {games.map((game) => (

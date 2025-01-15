@@ -61,9 +61,9 @@ const News = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white p-6">
+    <div className="bg-gray-900 text-white p-4">
       <form className="w-full mx-auto ps-0 pb-4">
-        <label htmlFor="default-search" className="w-max mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
+        <label htmlFor="default-search" className="w-full mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
           Wyszukaj
         </label>
         <div className="relative">
@@ -138,7 +138,7 @@ const News = () => {
           <div className="space-y-4">
             {section.articles.map((article, articleIndex) => (
               <Link
-                to={article.link} // Używamy dynamicznego linku
+                to={"#"} // Używamy dynamicznego linku
                 key={articleIndex}
                 className="hover:text-blue-300 transition duration-300 p-4"
               >
