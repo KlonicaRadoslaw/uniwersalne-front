@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { loadGamesData } from '../../helperFunctions/loadGamesData';
 import { StarIcon } from '@heroicons/react/16/solid';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+
 
 function Home() {
   const [games, setGames] = useState([]);
-  const [choosed, setChoosed] = useState(null); // Changed to null initially
-  const [hovered, setHovered] = useState(null); // Track hovered game
-  const [activeTab, setActiveTab] = useState('Popularne nowości'); // Track active category
-  const [filteredGames, setFilteredGames] = useState(games[[0, 2]]); // Track games for active category
+  const [choosed, setChoosed] = useState(null); 
+  const [hovered, setHovered] = useState(null);
+  const [activeTab, setActiveTab] = useState('Popularne nowości');
+  const [filteredGames, setFilteredGames] = useState(games[[0, 2]]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,10 +49,23 @@ function Home() {
     { name: 'Nadchodzące darmowe', range: [0, 2] },
   ];
 
-
   const handleCategoryClick = (category) => {
     setActiveTab(category.name);
     setFilteredGames(games.slice(category.range[0], category.range[1] + 1));
+  };
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const showPrev = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? games.length - 3 : prevIndex - 1
+    );
+  };
+
+  const showNext = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === games.length - 3 ? 0 : prevIndex + 1
+    );
   };
 
   return (
@@ -203,36 +218,62 @@ function Home() {
         </div>
       </div>
 
-      {/* Featured Section */}
-      <div className="w-full px-0 mt-3">
-        <h2 className="text-3xl font-bold text-center text-white mb-8 mt-5">Wyróżnione i polecane</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Game Item Cards */}
-          {games.map((game) => (
-            <div
-              key={game.id}
-              className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
-            >
-              <img
-                src={require(`../images/${game.image}`)}
-                alt={game.title}
-                className="w-full h-44 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-semibold text-white">{game.title}</h3>
-              <p className="text-gray-400 text-sm mt-2 mb-4">{game.description}</p>
-              <div className="flex flex-col items-end justify-start mb-1">
-                <p className="text-sm text-green-400 font-semibold mb-2">Cena: {game.price}</p>
-                <Link
-                  to={{ pathname: `/game/${game.id}`, state: { game } }}
-                  className="text-sm text-blue-500 hover:text-blue-300 transition duration-300"
-                >
-                  Wyświetl szczegóły
-                </Link>
+      <div className="w-full px-4 mt-3">
+      <h2 className="text-3xl font-bold text-center text-white mb-8 mt-5">
+        Wyróżnione i polecane
+      </h2>
+      
+      <div className="relative">
+        <button 
+          onClick={showPrev}
+          className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-10 bg-gray-800 p-2 rounded-full text-white hover:bg-gray-700 transition-colors"
+        >
+          <ChevronLeftIcon className="w-6 h-6" />
+        </button>
+
+        <div className="overflow-hidden">
+          <div 
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+          >
+            {games.map((game) => (
+              <div
+                key={game.id}
+                className="w-1/3 flex-shrink-0 px-3"
+              >
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <img
+                    src={require(`../images/${game.image}`)}
+                    alt={game.title}
+                    className="w-full h-44 object-cover rounded-md mb-4"
+                  />
+                  <h3 className="text-xl font-semibold text-white">{game.title}</h3>
+                  <p className="text-gray-400 text-sm mt-2 mb-4">{game.description}</p>
+                  <div className="flex flex-col items-end justify-start mb-1">
+                    <p className="text-sm text-green-400 font-semibold mb-2">
+                      Cena: {game.price}
+                    </p>
+                    <button
+                      
+                      className="text-sm text-blue-500 hover:text-blue-300 transition duration-300"
+                    >
+                      Wyświetl szczegóły
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
+        <button 
+          onClick={showNext}
+          className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-10 bg-gray-800 p-2 rounded-full text-white hover:bg-gray-700 transition-colors"
+        >
+          <ChevronRightIcon className="w-6 h-6" />
+        </button>
       </div>
+    </div>
 
       {/* Oferty specjalne */}
       <div className="w-full px-0 mt-8">
